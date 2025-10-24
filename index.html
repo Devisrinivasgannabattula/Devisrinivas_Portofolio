@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Devi Srinivas | Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <h1 class="logo">Devi Srinivas G.</h1>
+  <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+  </div>
+  <ul id="nav-links">
+      <li><a href="#hero" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+       <li><a href="#experience" class="nav-link">Experience</a></li>
+      <div class="nav-indicator"></div>
+  </ul>
+</nav>
+
+
+<!-- Hero Section -->
+
+<!-- Preloader -->
+<div id="preloader">
+  <div class="loader"></div>
+</div>
+
+
+<header id="hero">
+    <div class="hero-content">
+        <h2 class="typing-effect">Hey, I'm <span>Devi Srinivas</span> . Let's Connect !</h2>
+        <p>Aspiring Software Developer | Computer Science and Engineering Graduate | TechEnthusiatic</p>
+        <button onclick="scrollToSection('projects')" class="gradient-btn">Explore My Work</button>
+    </div>
+</header>
+
+<!--No of unique visitors-->
+<div onclick="increaseVisitorCount()">
+ <center>👀 Number of unique Visitors: <span id="visitorCount">50 +</span></center>
+</div>
+
+<script>
+let count = parseInt(localStorage.getItem("visitorCount")) || 50 +;
+document.getElementById("visitorCount").textContent = count;
+
+function increaseVisitorCount() {
+    let target = count + 1;
+    let display = document.getElementById("visitorCount");
+    let current = count;
+
+    let interval = setInterval(() => {
+        current++;
+        display.textContent = current;
+        if (current >= target) {
+            clearInterval(interval);
+            count = target;
+            localStorage.setItem("visitorCount", count);
+        }
+    }, 50);
+}
+</script>
+
+<br><br>
+<!-- About Section -->
+<section id="about">
+  <div class="about-container">
+    <div class="about-image">
+      <img src="images/mypic3.jpg" alt="Devi Srinivas">
+    </div>
+    <div class="about-content">
+      <h2>About Me</h2>
+      <p>Hello! I'm <strong>Devi Srinivas</strong>, a passionate <span class="highlight">Computer Science Engineering</span> graduate (2025) skilled in full-stack development and software testing.</p>
+      <p>I enjoy building scalable, user-focused applications and collaborating on creative projects. My goal is to grow as a developer while contributing innovative ideas to real-world solutions.</p>
+      <a href="https://drive.google.com/file/d/1KgbQ58awaV2t7DliCGMXvnWKnFr58VHL/view?usp=sharing" class="blue-button">Download Resume</a>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Projects Section -->
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-carousel-wrapper">
+        <div class="projects-carousel">
+            <div class="project-card">
+                <img src="images/project2.jpg" alt="JobFit Analyzer" />
+                <h3>JobFit Analyzer</h3>
+                <p>Resume screening tool</p>
+                <a href="https://github.com/Devisrinivasgannabattula/JobFitAnalyzer-using-Google_gemini_pro_LLM.git" class="gradient-btn">View Code</a>
+            </div>
+            <div class="project-card">
+                <img src="images/project1.jpg" alt="Sales Prediction" />
+                <h3>Sales Prediction Using Python</h3>
+                <p>Predicting sales trends using Python libraries and data analysis.</p>
+                <a href="https://github.com/Devisrinivasgannabattula/CODESOFT.git" class="gradient-btn">View Code</a>
+            </div>
+            <div class="project-card">
+                <img src="images/blogwebsite.png" alt="Blog Website" />
+                <h3>Blog Website</h3>
+                <p>Personal blog using HTML, CSS, JS, Node.js, and MongoDB.</p>
+                <a href="https://github.com/Devisrinivasgannabattula/Blog_website.git" class="gradient-btn">View Code</a>
+            </div>
+            <div class="project-card">
+                <img src="images/Arduinoproject.png" alt="Arduino Project" />
+                <h3>Arduino computer control System</h3>
+                <p>System to control computer through hand gestures.</p>
+                <a href="https://github.com/Devisrinivasgannabattula/Arduino_powered_handgesture_computer_control_system.git" class="gradient-btn">View Code</a>
+            </div>
+            <div class="project-card">
+                <img src="images/abusivecmnt.png" alt="abusive project" />
+                <h3>Abusive comment detection and prevention</h3>
+                <p>It makes online platform safer</p>
+                <a href="https://github.com/Devisrinivasgannabattula/Abusivecomment-detection-and-prevention-using-ml-with-python.git" class="gradient-btn">View Code</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="timeline-section">
+  <h2>Experience</h2>
+  <div class="timeline">
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <h3><i class="fas fa-laptop-code"></i> Applied AI Intern</h3>
+        <p><strong>Company:</strong> Oceanapps Technologies PVT.LTD</p>
+        <p><strong>Duration:</strong> January 2025 – April 2025</p>
+        <p><strong>Role:</strong> Built Sales Prediction System using Machine Learning with Python in Jupyter Notebook</p>
+        <p><strong>Company Profile:</strong> 
+          <a href="https://www.oceanapps.in/WebSites/oceanapps/" target="_blank">Oceanapps Technologies PVT LTD <i class="fas fa-external-link-alt"></i></a>
+        </p>
+      </div>
+    </div>
+
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <h3><i class="fas fa-database"></i> Web Application Development Intern</h3>
+        <p><strong>Company:</strong> MSNM Technologies (P) Ltd, in accordance with R&D Lab.</p>
+        <p><strong>Duration:</strong> May 2023 – July 2023</p>
+        <p><strong>Role:</strong> Developed an ecommerce Web App to perform Login,crud operations on customer's data using Html ,CSS ,Javascript, Php, Bootstrap and Xampp.</p>
+        <p><strong>My Work:</strong> 
+          <a href="https://drive.google.com/file/d/1q2B2nUNJvXkGUZlTS9-J_87XosWS9Pxn/view?usp=sharing" target="_blank"> Project Document <i class="fas fa-external-link-alt"></i></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Education Section -->
+<section id="education" class="timeline-section">
+  <h2>Education</h2>
+  <div class="timeline">
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <h3><i class="fas fa-graduation-cap"></i> B.Tech - Computer Science and Engineering</h3>
+        <p><strong>College:</strong> VSM College of Engineering, Ramachandrapuram</p>
+        <p><strong>University:</strong> JNTUK</p>
+        <p><strong>Year:</strong> 2021 – 2025</p>
+        <p><strong>CGPA:</strong> 70%</p>
+        <p><strong>Final Year Project:</strong> Abusive Comment Detection and Prevention using Machine Learning with Python</p>
+        <p><strong>College Profile:</strong> 
+          <a href="https://www.vsm.edu.in/" target="_blank">V.S.M College of Engineering <i class="fas fa-external-link-alt"></i></a>
+        </p>
+      </div>
+    </div>
+
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <h3><i class="fas fa-book"></i> Intermediate - MPC</h3>
+        <p><strong>College:</strong> P.R.Government Junior Boys College, Kakinada</p>
+        <p><strong>Year:</strong> 2019 – 2021</p>
+        <p><strong>Percentage:</strong> 87%</p>
+        <p><strong>Board:</strong>Board Of Intermediate Education Andhra Pradesh</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Skills Section -->
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+        <div class="skill-card"><img src="images/clogo.png" alt="C "><h1>C </h1><p>Intermediate proficiency in C language.</p></div>
+        <div class="skill-card"><img src="images/sqllogo.png" alt="SQL"><h1>SQL</h1><p>Proficient in database management and query optimization.</p></div>
+        <div class="skill-card"><img src="images/pythonlogo.png" alt="Python"><h1>Python</h1><p>Intermediate proficiency in Python.</p></div>
+        <div class="skill-card"><img src="images/dsalogo.png" alt="DSA"><h1>DSA</h1><p>Begginer problemsolving skills on DSA.</p></div>
+        <div class="skill-card"><img src="images/htmllogo.png" alt="html"><h1>HTML</h1><p>Intermediate proficiency in HTML for web development.</p></div>
+        <div class="skill-card"><img src="images/csslogo.png" alt="CSS"><h1>CSS</h1><p>Intermediate proficiency in CSS for web development.</p></div>
+        <div class="skill-card"><img src="images/javascriptlogo.png" alt="Javascript"><h1>JS ES6</h1><p>Intermediate proficiency in Java Script for web development.</p></div>
+        <div class="skill-card"><img src="images/java_5968282.png" alt="CoreJava"><h1>Core Java</h1><p>Intermediate proficiency in Core Java concepts</p></div>
+        <div class="skill-card"><img src="images/springbootlogo.png" alt="Springboot"><h1>Springboot</h1><p>Intermediate proficiency in springboot microservices</p></div>
+        <div class="skill-card"><img src="images/Restapilogo.png" alt="RestfulAPI"><h1>RESTful API</h1><p>Intermediate proficiency in Restful API</p></div>
+        <div class="skill-card"><img src="images/gitlogo.png" alt="Git"><h1>Git</h1><p>Git for version control</p></div>
+        <div class="skill-card"><img src="images/mllogo.png" alt="Machine Learning"><h1>M L</h1><p>Intermediate proficiency in Machine Learning concepts</p></div>
+        <div class="skill-card"><img src="images/cloudlogo.png" alt="Cloud Computing"><h1>AWS</h1><p>Basics proficiency in cloud concepts</p></div>
+        <div class="skill-card"><img src="images/mongodblogo.png" alt="MongoDB"><h1>MongoDB</h1><p>Basics proficiency in MongoDB</p></div>
+        <div class="skill-card"><img src="images/photoshoplogo.png" alt="Adobe photoshop cs6"><h1>Adobe CS6</h1><p>intermediate proficiency in Adobe photoshop cs6</p></div>
+    </div>
+</section>
+
+<!-- Achievements Section -->
+<section id="achievements">
+    <h2>Achievement</h2>
+    <div class="achievements-grid">
+        <div class="achievement-card">
+            <h3>390 Rank - MCQ Coding Hackathon</h3>
+            <p><b>Qualified in the Foundations Round (MCQ) of CodeClash Hackathon :The August
+Arena securing Rank 390 out of 4000+ participants organised by Lets Code Community on unstop platform
+30 August 2025.</b></p>
+        </div>
+    </div>
+</section>
+
+<!--certificate Section-->
+
+<section id="certificates">
+  <h2>Course work</h2>
+  <div class="certificates-container">
+    <div class="certificate-card">
+      <h3>Databases and SQL for Data Science</h3>
+      <p>Coursera | IBM</p>
+      <a href="https://drive.google.com/file/d/1pQ-xgQzh8Oq6pXT5egjOQJqIa1zh0qES/view?usp=sharing" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="certificate-card">
+      <h3>Cloud Computing Bootcamp</h3>
+      <p>Yhills</p>
+      <a href="https://drive.google.com/file/d/1CVxSN5cysBKPqshElOPuAG3MUKZXkLD-/view?usp=sharing" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="certificate-card">
+      <h3>Python Programming Language</h3>
+      <p>Kaggle</p>
+      <a href="https://drive.google.com/file/d/1KbyqpbQAem7AZL7J6F0QZoZMPIJC5v6G/view?usp=sharing" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="certificate-card">
+      <h3>ML with Python: APractical Introduction</h3>
+      <p>Edx</p>
+      <a href="https://drive.google.com/file/d/1bIFwbxpKMJ31uic9oFyWfKsxAdFi-sCs/view?usp=sharing" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="certificate-card">
+      <h3>Introduction to Soft Skills</h3>
+      <p>TCS ION</p>
+      <a href="https://drive.google.com/file/d/1YuEjk0vB1zoDbhihMtTF-maWjhhNufsr/view?usp=sharing" target="_blank">View Certificate</a>
+    </div>
+  </div>
+
+</section>
+
+
+
+<!-- Scroll-to-Top Button -->
+<button id="scrollToTop" onclick="scrollToTop()">⬆</button>
+
+<!-- Footer -->
+<footer>
+  <p>Connect with me:</p><br>
+  <a href="https://github.com/Devisrinivasgannabattula" target="_blank" class="social-link">
+    <img src="images/github.png" alt="GitHub" width="20" height="20">
+  </a>
+  <a href="https://www.linkedin.com/in/devisrinivasgannabattula/" target="_blank" class="social-link">
+    <img src="images/linkedinlogo.png" alt="LinkedIn" width="20" height="20">
+  </a>
+  <a href="https://www.instagram.com/devisrinivasgannabattula/" target="_blank" class="social-link">
+    <img src="images/instagramlogo.png" alt="Instagram" width="20" height="20">
+  </a>
+  <p>&copy; 2025 Devi Srinivas Gannabattula. All rights reserved.</p>
+</footer>
+
+
+<!-- Mouse Smoke Canvas -->
+<canvas id="smokeCanvas"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
