@@ -2,6 +2,14 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; background: #0a0a0a; color:#fff; position: relative; overflow-x: hidden; }
 
+
+.container {
+  width: 100%;
+  max-width: 1200px; /* limits on large screens */
+  margin: auto;
+}
+
+
 /* Navbar */
 nav { display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; background: rgba(0,0,0,0.85); position:fixed; width:100%; z-index:100; }
 nav h1 { font-size:1.5rem; }
@@ -803,3 +811,4 @@ footer a:active img {
   height: 100%;
   background: #ffcc00;
 }
+
